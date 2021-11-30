@@ -15,22 +15,45 @@ GPT-2 is trained with a general dataset of knowledge and human conversations. Th
 
 ### Preparing Your Machine
 - Download [Visual Studio Code](https://code.visualstudio.com) for your machine (Mac, PC, Linux)
-  - Open VS Code 
-  - Open the "Extensions" Tab and verify that the Extension [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) is installed
+- Open VS Code 
+- Open the "Extensions" Tab and verify that the Extension [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) is installed
 - Create a folder for your project and open the folder in VS Code.
 - Create a filename titled `train.ipynb` in that folder
-  - This should open the Jupyter input interface. For example you should see new buttons titled `+Code`, `+Markdown`, `>Run All`
-  - This interface is now ready to receive Python commands (see below). Each command is entered step by step into your Jupyter interface. Results at the end of each command will be displayed directly in this window, following which you can enter the next command.
+- This should open the Jupyter input interface. For example you should see new buttons titled `+Code`, `+Markdown`, `>Run All`
+- This interface is now ready to receive Python commands (see below). Each command is entered step by step into your Jupyter interface. Results at the end of each command will be displayed directly in this window, following which you can enter the next command.
 
 ### Preparing Your Dataset
 - Text sources (sorry, English only for now)
-  - Guttenberg (teach your bot to speak like Virginia Woolf)
+- Guttenberg (teach your bot to speak like Virginia Woolf)
 - Clean up your text
-  - Pattern matching
-  - Experment mode: Learn Regex 
+- Pattern matching
+- Experment mode: Learn Regex 
 
 ### Train Your Bot
+- At this time, begin to create a new code block.
+- The first bloc of code is :
+
+```
+	!pip install -q gpt-2-simple
+	import gpt_2_simple as gpt2
+	from datetime import datetime
+```
+
+it's means that you check if the library gpt-2-simple is installed in your system, and we need to `import gpt_2_simple`and `datetime` library. 
+- Now you can press Play, to execute this part of code. (it take a little bit of time...)
+- Now we will check the state of the graphic card, it can be usefull if you have a strong graphic card.
+```
+!nvidia-smi
+```
+- Press Play to see the result.
+- After that we will downlad the smallest model of GPT2.
+```
+gpt2.download_gpt2(model_name="124M")
+```
+- Press Play again and also wait that the model download to your computer.
 - 
+
+
 
 ## Talking To Your Bot
 Now that we have trained our bot with its own style, let's starting talking to it.
