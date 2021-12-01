@@ -74,8 +74,9 @@ Different ways of speaking to your bot.
 - Max/MSP
 
 ## Online Tutorials
-- [How To Make Custom AI-Generated Text With GPT-2](https://minimaxir.com/2020/01/twitter-gpt2-bot/)
-- [https://www.gwern.net/GPT-2](https://www.gwern.net/GPT-2)
+- [GPT-2 Neural Network Poetry](https://www.gwern.net/GPT-2)
+- [How To Make Custom AI-Generated Text With GPT-2](https://minimaxir.com/2019/09/howto-gpt2/)
+- [How to Build a Twitter Text-Generating AI Bot With GPT-2](https://minimaxir.com/2020/01/twitter-gpt2-bot/)
 
 ## Context
 This tutorial was created by the Pool Numérique and the Master Media Design HEAD–Genève for the Virtual Beings semester project (2021-22).
