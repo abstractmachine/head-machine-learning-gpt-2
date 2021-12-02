@@ -41,7 +41,7 @@ import gpt_2_simple as gpt2
 from datetime import datetime
 ```
 
-The above code checks to see if the `gpt-2-simple` library is installed in your system. We also need to `import gpt_2_simple`and `datetime` library. 
+The above code checks to see if the `gpt-2-simple` library is installed in your system. We also need to `import` the `gpt_2_simple`and `datetime` libraries. 
 
 Now you can press Play, to execute this part of code. (It will take a little bit of time...)
  
