@@ -1,4 +1,6 @@
-# head-machine-learning-gpt-2
+# Talking To Robots
+
+## Training a GPT-2 bot
 A tutorial checklist for installing, training, and using gpt-2
 
 ## History
