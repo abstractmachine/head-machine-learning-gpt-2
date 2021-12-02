@@ -1,5 +1,8 @@
 # Talking To Robots
 
+## Translation
+Il y a une version française de ce tutoriel [Parler aux robots](LISEZMOI.md).
+
 ## Training a GPT-2 bot
 This is a tutorial/checklist for installing, training, and using [GPT-2](https://en.wikipedia.org/wiki/GPT-2).
 
