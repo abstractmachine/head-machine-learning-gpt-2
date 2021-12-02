@@ -1,7 +1,7 @@
 # Talking To Robots
 
 ## Training a GPT-2 bot
-A tutorial checklist for installing, training, and using gpt-2
+This is a tutorial/checklist for installing, training, and using [GPT-2](https://en.wikipedia.org/wiki/GPT-2).
 
 ## History
 What is it?
@@ -36,26 +36,29 @@ GPT-2 is trained with a general dataset of knowledge and human conversations. Th
 - The first bloc of code is :
 
 ```
-	!pip install -q gpt-2-simple
-	import gpt_2_simple as gpt2
-	from datetime import datetime
+!pip install -q gpt-2-simple
+import gpt_2_simple as gpt2
+from datetime import datetime
 ```
 
-it's means that you check if the library gpt-2-simple is installed in your system, and we need to `import gpt_2_simple`and `datetime` library. 
-- Now you can press Play, to execute this part of code. (it take a little bit of time...)
-- Now we will check the state of the graphic card, it can be usefull if you have a strong graphic card.
+The above code checks to see if the `gpt-2-simple` library is installed in your system. We also need to `import gpt_2_simple`and `datetime` library. 
+
+Now you can press Play, to execute this part of code. (It will take a little bit of time...)
+ 
+Now we will check the state of the graphic card, it can be usefull if you have a strong graphic card.
+
 ```
 !nvidia-smi
 ```
-- Press Play to see the result.
-- After that we will downlad the smallest model of GPT2.
+
+Press Play to see the result.
+After that we will downlad the smallest model of GPT2:
+
 ```
 gpt2.download_gpt2(model_name="124M")
 ```
-- Press Play again and also wait that the model download to your computer.
-- 
 
-
+Press Play again and also wait that the model download to your computer.
 
 ## Talking To Your Bot
 Now that we have trained our bot with its own style, let's starting talking to it.
