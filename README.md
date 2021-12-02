@@ -73,10 +73,13 @@ Different ways of speaking to your bot.
 - Godot
 - Max/MSP
 
+## Attributuion
+This tutorial repackages [Max Woolf](https://minimaxir.com)'s [Train a GPT-2 Text-Generating Model w/ GPU]() Google Colab notebook and their [gpt-2-simple](https://github.com/minimaxir/gpt-2-simple) training code.
+
 ## Online Tutorials
 - [GPT-2 Neural Network Poetry](https://www.gwern.net/GPT-2)
 - [How To Make Custom AI-Generated Text With GPT-2](https://minimaxir.com/2019/09/howto-gpt2/)
 - [How to Build a Twitter Text-Generating AI Bot With GPT-2](https://minimaxir.com/2020/01/twitter-gpt2-bot/)
 
 ## Context
-This tutorial was created by the Pool Numérique and the Master Media Design HEAD–Genève for the Virtual Beings semester project (2021-22).
+This tutorial was created by the [Pool Numérique](https://www.hesge.ch/head/formations-recherche/pool-numerique) and the [Master Media Design](https://www.hesge.ch/head/formations-recherche/master-en-media-design) ([HEAD–Genève](https://www.hesge.ch/head)), for the Virtual Beings semester project (2021-22).
