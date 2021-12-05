@@ -24,8 +24,10 @@ Dale Markowitz has a really good video from August 2021 describing briefly what 
 The original paper that invented this approach is probably hard to read for most people reading this tutorial, but here it is if you are curious: [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) (December 2017). This paper was a collaboration between Google (and more specifically, Google Brain) and the University of Toronto, i.e. the place where [Geoffrey Hinton](https://en.wikipedia.org/wiki/Geoffrey_Hinton) teaches and does research. If you want a data science analysis of why this work was important, and why it replaced the techniques that came before it, here is a somewhat more digestible presentation on its importance: [LSTM is dead. Long Live Transformers!](https://youtu.be/S27pHKBEp30).
 
 ## First Contact
-(Talking with a GPT-2 bot online)
-- [](https://app.inferkit.com/demo)
+Let's talk to some oneline bots written with GPT-2.
+
+- [Write With Transformer](https://transformer.huggingface.co)
+- [Infer Kit Demo](https://app.inferkit.com/demo)
 
 ## Re-train GPT In Your Own Style
 GPT-2 is trained with a general dataset of knowledge and human conversations. This makes for boring converstaions. Let's teach it to speak in a specific style, manner, or syntax.
