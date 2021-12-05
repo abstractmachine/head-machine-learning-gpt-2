@@ -43,10 +43,14 @@ GPT-2 is trained with a general dataset of knowledge and human conversations. Th
 
 ### Preparing Your Dataset
 - Text sources (sorry, English only for now)
-- Guttenberg (teach your bot to speak like Virginia Woolf)
+	- [Project Guttenberg](https://www.gutenberg.org), if for example you wish to teach your bot to speak like [Virginia Woolf](https://www.gutenberg.org/ebooks/author/89)
 - Clean up your text
-- Pattern matching
-- Experment mode: Learn Regex 
+	- Simple pattern matching [VS Code, Basic Editing, Find and Replace](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace)
+- Experment mode: Learn Regex
+	- [Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)
+	- [RegexOne: Learn Regular Expressions with simple, interactive exercises](https://regexone.com)
+	- [RegexLearn](https://regexlearn.com/learn)
+	- [Regex 101](https://regex101.com)
 
 ### Train Your Bot
 - At this time, begin to create a new code block.
