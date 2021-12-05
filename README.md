@@ -1,15 +1,27 @@
 # Talking To Robots
 
 ## Translation
-Il y a une version française de ce tutoriel [Parler aux robots](LISEZMOI.md).
+Il y a une version française de ce tutoriel : [Parler aux robots](LISEZMOI.md).
 
-## Training a GPT-2 bot
-This is a tutorial/checklist for installing, training, and using [GPT-2](https://en.wikipedia.org/wiki/GPT-2).
+## What Is This?
+This document is a tutorial/checklist for installing, training, and using [GPT-2](https://en.wikipedia.org/wiki/GPT-2).
 
 ## History
-What is it?
+We are going to be generating text with a bot. The field of computer science that thinks about how to interpret and generate text is [Natural Language Processing](https://en.wikipedia.org/). Natural Language Processing dates from the earliest reserach in computer science and many of the earliest text from the very beginnings — cf. [Computing Machinery and Intelligence](https://en.wikipedia.org/wiki/Computing_Machinery_and_Intelligence) — are related to teaching computers to understand human languge and use it to communicate with us.
 
-- What is a Text Transformer
+### Historical Approaches to Text Generation
+There are many different historical methods used to generate text with a computer. An excellent overview of the most important techniques can be helpful when making art and design projects that generate text. Sometimes, for example, a neural network is overkill and a simpler approach would be more helpful.
+
+An excellent overview of the history of “generative” artworks and the various techniques used to build them is [Philippe Pasquier](https://philippepasquier.com)’s online course [Generative Art and Computational Creativity](https://www.kadenze.com/programs/generative-art-and-computational-creativity).
+
+Another important tool used for text generation is the [RiTa](https://rednoise.org/rita/) library which includes tutorials and examples for integrating the library into a [P5](https://p5js.org) or [Processing](https://processing.org) project. RiTa is often a good starting point when learning to make generative text works of art.
+
+### Transformers
+The type of text transformer we will be using for this tutorial is called « GPT », which stands for « Generative Pre-trained Transformer ». « Generative » means, as the name might suggest, that the computer will be generating text output for us. « Pre-trained » describes how previously captured text will be use to create a previously-trained model that we will then modify to generate a new text in the style we want. And finally, « transformer » describes the neural network algorithm itself that is used to make all this possible.
+
+Dale Markowitz has a really good video from August 2021 describing briefly what a transformer “is”. It is probably your best starting point: [](https://youtu.be/SZorAJ4I-sA)
+
+The original paper that invented this approach is probably hard to read for most people reading this tutorial, but here it is if you are curious: [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) (December 2017). This paper was a collaboration between Google (and more specifically, Google Brain) and the University of Toronto, i.e. the place where [Geoffrey Hinton](https://en.wikipedia.org/wiki/Geoffrey_Hinton) teaches and does research. If you want a data science analysis of why this work was important, and why it replaced the techniques that came before it, here is a somewhat more digestible presentation on its importance: [LSTM is dead. Long Live Transformers!](https://youtu.be/S27pHKBEp30).
 
 ## First Contact
 (Talking with a GPT-2 bot online)
