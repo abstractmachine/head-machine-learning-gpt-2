@@ -19,7 +19,7 @@ Another important tool used for text generation is [Daniel Howe]()’s [RiTa](ht
 ### Transformers
 The type of text transformer we will be using for this tutorial is called « GPT », which stands for « Generative Pre-trained Transformer ». « Generative » means, as the name might suggest, that the computer will be generating text output for us. « Pre-trained » describes how previously captured text will be use to create a previously-trained model that we will then modify to generate a new text in the style we want. And finally, « transformer » describes the neural network algorithm itself that is used to make all this possible.
 
-Dale Markowitz has a really good video from August 2021 describing briefly what a transformer “is”. It is probably your best starting point: [](https://youtu.be/SZorAJ4I-sA)
+Dale Markowitz has a really good video from August 2021 describing briefly what a transformer “is”. It is probably your best starting point: [Transformers, explained: Understand the model behind GPT, BERT, and T5](https://youtu.be/SZorAJ4I-sA)
 
 The original paper that invented this approach is probably hard to read for most people reading this tutorial, but here it is if you are curious: [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) (December 2017). This paper was a collaboration between Google (and more specifically, Google Brain) and the University of Toronto, i.e. the place where [Geoffrey Hinton](https://en.wikipedia.org/wiki/Geoffrey_Hinton) teaches and does research. If you want a data science analysis of why this work was important, and why it replaced the techniques that came before it, here is a somewhat more digestible presentation on its importance: [LSTM is dead. Long Live Transformers!](https://youtu.be/S27pHKBEp30).
 
