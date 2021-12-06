@@ -26,6 +26,7 @@ The original paper that invented this approach is probably hard to read for most
 ## First Contact
 Let's talk to some oneline bots written with GPT-2.
 
+- [Talk To Transformer](https://talktotransformer.com)
 - [Write With Transformer](https://transformer.huggingface.co)
 - [Infer Kit Demo](https://app.inferkit.com/demo)
 
@@ -99,7 +100,7 @@ Different ways of speaking to your bot.
 - Max/MSP
 
 ## Attributuion
-This tutorial repackages [Max Woolf](https://minimaxir.com)'s [Train a GPT-2 Text-Generating Model w/ GPU]() Google Colab notebook and their [gpt-2-simple](https://github.com/minimaxir/gpt-2-simple) training code.
+This tutorial repackages [Max Woolf](https://minimaxir.com)'s [Train a GPT-2 Text-Generating Model w/ GPU](https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce) Google Colab notebook and their [gpt-2-simple](https://github.com/minimaxir/gpt-2-simple) training code.
 
 ## Online Tutorials
 - [GPT-2 Neural Network Poetry](https://www.gwern.net/GPT-2)
