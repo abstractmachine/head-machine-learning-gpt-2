@@ -43,18 +43,31 @@ GPT-2 is trained with a general dataset of knowledge and human conversations. Th
 - This interface is now ready to receive Python commands (see below). Each command is entered step by step into your Jupyter interface. Results at the end of each command will be displayed directly in this window, following which you can enter the next command.
 
 ### Preparing Your Dataset
-- Text sources (sorry, English only for now)
-	- [Project Guttenberg](https://www.gutenberg.org), if for example you wish to teach your bot to speak like [Virginia Woolf](https://www.gutenberg.org/ebooks/author/89)
-- Clean up your text
-	- Simple pattern matching: [VS Code, Basic Editing, Find and Replace](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace)
-- Advanced mode: Learn [Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)
+Probably the most important part of retraining is preparing the dataset — well before the actual neural network training itself. This is a process that more ressembles the art of curation, and less that of writing. I.e. you will mostly avoid writing new material during this phase, especially given the massive *amount* of text that you will need to feed to GPT in order to make it compelling and — textually speaking — *diverse*. A very short text file won't work for training GPT in any significant way. Therefore it is simply impractical in most cases to write the text yourself. Instead you will need to find a collection of texts that adhere in their diversity to the style of whatever it is you are trying to create stylistically, or in terms of personality.
+
+For example, in [Simon Senn](http://www.simonsenn.com)'s and [Tammara Leites](https://issue-journal.ch/author/tammara-leites-en/)' performance [dSimon](https://www.liberation.fr/culture/scenes/la-premiere-intelligence-artificielle-sur-une-scene-de-theatre-repond-a-libe-alors-que-les-autres-donnent-lillusion-de-jouer-je-donne-lillusion-de-penser-20211122_DBVC5XT4JRAJJGZGLYB5ZMRJ6Q/), the duo used a huge collection of several years of Simon Senn's personal emails to train his GPT double. This created a disturbingly familiar, and yet consistently surreal, textual double that mimicked eerily Simon's own writings, musings, and interpersonnal communications — while simultaneously producing a lot of interresting absurd proclamations. For their result to work on a poetic level, this required thousands and thousands of lines of text, and not just a few emails selected here or there from Simon's epistolary life.
+
+The type text you need to prepare is raw text — `.txt` format text — which simply means that the text has no extraneous fonts, formatting, color, size or even indications of bold or italic. It is just a collection of raw letters from A to Z, numbers, punctuation, and various accented characters. Special note: for now, we will be working entirely in *english*. Even though GPT is not technically limited to *english*, the original training was done in *english* and so will not simply tranfer easily over to another language during the retraining process. Perhaps you will have better luck than we did, but be forewarned.
+
+There are many places where you can find raw blocks of text to source your training dataset. A good starting point is [Project Guttenberg](https://www.gutenberg.org), if for example you wish to teach your bot to speak like [Virginia Woolf](https://www.gutenberg.org/ebooks/author/89).
+
+Texts found at Guttenberg and other sources online will contain a lot of extraneous legal disclaimers, punctuation, and other undesired textual noise that will enter into your training if you do not remove it. So once you have selected your text sources and copied it into a single `.txt` file, you will need to clean up your text.
+
+We suggest using [VS Code](https://code.visualstudio.com) to edit your dataset. It has a simple 'find', 'replace', and 'replace all' function, much like many other text and code editors. For simple pattern matching cf. [VS Code, Basic Editing, Find and Replace](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace). Use this `find` + `replace all` method to clean out your giant block of text of all of the extraneous spaces and punctuation that you do not want to enter into GPT.
+
+If you want to fall down a deep rabbit hole of text-wrangling awesomeness, this simple `find`/`replace` tool has a little button with a star that will activate a crazy-looking but sophisticated and powerful text “parsing” language called [Regular Expressions](https://en.wikipedia.org/wiki/Regular_expression). Regular Expressions are amazing, but also look like the unfortunate accident of some randpm computer error: it is famously very difficult to read. Thankfully, VS Code gives you some visual pointers on what your regular expressions will do to your text before you commit, and you will also found numerous tutorials online to teach you this nutso language:
 	- [RegexOne: Learn Regular Expressions with simple, interactive exercises](https://regexone.com)
 	- [Regex 101](https://regex101.com)
 	- [RegexLearn](https://regexlearn.com/learn)
 
 ### Train Your Bot
-- At this time, begin to create a new code block.
-- The first bloc of code is :
+Now that your text is ready for training, let us load it into our GPT pretrained network (the *P* of *GPT* stands for “pretrained”) and start retraining with it.
+
+We will use the `Jupyter` environment of `VS Code` which should automatically activate whenever you open a text file ending in the `.ipynb` format.
+
+Either create a new text file named `train.ipynb` or simply use the file provided with this document inside the `Jupyter` folder.
+
+If you are writing your own text from scratch, you will need to clock on the `+Code` button in order to begin to create a new code block. This first bloc of code is :
 
 ```
 !pip install -q gpt-2-simple
@@ -64,25 +77,61 @@ from datetime import datetime
 
 The above code checks to see if the `gpt-2-simple` library is installed in your system. We also need to `import` the `gpt_2_simple`and `datetime` libraries. 
 
-Now you can press Play, to execute this part of code. (It will take a little bit of time...)
- 
-Now we will check the state of the graphic card, it can be usefull if you have a strong graphic card.
+Now you can press the button inside of the `[ ]` brackets, which will execute this part of code. It will take a little bit of time...
+
+When this has finished executing, we try to accelerate the training process by testing if you have an Nvidia graphics card.
 
 ```
 !nvidia-smi
 ```
 
-Press Play to see the result.
+Press Play to see the result. If you are on a Mac, there is little to no chances of this `nvifia` function activating anything.
+
 After that we will downlad the smallest model of GPT2:
 
 ```
 gpt2.download_gpt2(model_name="124M")
 ```
 
-Press Play again and also wait that the model download to your computer.
+Press Play again and also wait for the model to download to your computer.
+
+Now we will actually train GPT. First, we need to create a training session that we will place in a variable named `sess`. Then we need to tell GPT what the name of our text file will be. This file should be in the same folder as our `train.ipynb` file. Finally, we use this filename to start the training process, which needs some extra information for example the amount of training steps it will need to take, and how often to test out the state of its results.
+
+```
+sess = gpt2.start_tf_sess()
+file_name = "shakespeare.txt"
+gpt2.finetune(sess,
+              dataset=file_name,
+              model_name='124M',
+              steps=1000,
+              restore_from='fresh',
+              run_name='run1',
+              print_every=100,
+              sample_every=200,
+              save_every=500
+              )
+```
+
+Depending on your computer this take several hours.
 
 ## Talking To Your Bot
-Now that we have trained our bot with its own style, let's starting talking to it.
+Now that we have trained our bot with its own style, let's starting talking to it. To test it out yourself, use the `generate()` command:
+
+```
+gpt2.generate(sess)
+```
+
+We probably want more control over our output, and also to define a “prompt” which will be used to begin opening words and characters that GPT will attempt to continue:
+
+```
+gpt2.generate(sess,
+              length=250,
+              temperature=0.7,
+              prefix="JULIET:",
+              nsamples=1,
+              batch_size=1
+              )
+```
 
 ### Command Line Prompt
 (direct communication with the bot on the command line)
