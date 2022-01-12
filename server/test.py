@@ -30,7 +30,6 @@ while True:
 
 sess.close()
 
-
 # configuration macOS M1 Max :
 
 # pyenv install 3.9.1
