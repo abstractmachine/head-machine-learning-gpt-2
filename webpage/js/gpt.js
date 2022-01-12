@@ -1,4 +1,4 @@
-
+// this function will grab the contents of the ""
 async function talkToRobot() {
 
 	// ge
@@ -7,7 +7,7 @@ async function talkToRobot() {
 	console.log(prompt)
 	
 	// Create WebSocket connection.
-	const request = await fetch("http://localhost:8000/ask;'" + prompt + "'", {
+	const request = await fetch("http://10.42.0.1:8000/ask;'" + prompt + "'", {
 		method: 'GET'
 	})
 
