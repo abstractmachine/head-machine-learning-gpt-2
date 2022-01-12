@@ -26,7 +26,13 @@ You should now be able to open your web browser and type into the URL field (i.e
 If you do not have PHP installed, and you do not want to install it, you can instead install a Node server to run your webpage
 
 ```
-$ brew install node
+$ brew install npm
+```
+
+Now you can install the http-server package with npm.
+
+```
+$ npm install --global http-server
 ```
 
 Once `node` has been installed, open your Terminal and go into the `webpage` folder and start serving this webpage to your browser:
@@ -34,3 +40,11 @@ Once `node` has been installed, open your Terminal and go into the `webpage` fol
 ```
 $ http-server
 ```
+
+## Check your version of nodeJS
+Sometime the version of nodeJS can be not the good version. But you can 
+
+
+
+
+
