@@ -29,7 +29,6 @@ class handler(BaseHTTPRequestHandler):
 	def do_GET(self):
 		parsed = urlparse(self.path)
 		if parsed.path == '/ask':
-
 			parameter = parsed.params
 			parameter = parameter.strip("'")
 			parameter = urllib.parse.unquote(parameter)
@@ -42,6 +41,9 @@ class handler(BaseHTTPRequestHandler):
 			message = speak_with_prefix(parameter)
 			#message = "test"
 			self.wfile.write(bytes(message, "utf8"))
+		
+		
+		
 		else:
 			self.send_response(200)
 			self.send_header('Content-type','text/html')
