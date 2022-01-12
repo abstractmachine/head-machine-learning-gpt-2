@@ -3,6 +3,7 @@
 '''
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
+import urllib.parse
 from urllib.parse import urlparse
 
 import gpt_2_simple as gpt2
@@ -30,11 +31,12 @@ class handler(BaseHTTPRequestHandler):
 		if parsed.path == '/ask':
 
 			parameter = parsed.params
-			# parameter = parameter.strip("'")
-			parameter = parameter.replace("_", " ")
+			parameter = parameter.strip("'")
+			parameter = urllib.parse.unquote(parameter)
 			print(parameter)
 			self.send_response(200)
-			self.send_header('Content-type','text/html')
+			self.send_header('Content-type','text/plain')
+			self.send_header('Access-Control-Allow-Origin', '*')
 			self.end_headers()
 
 			message = speak_with_prefix(parameter)
@@ -48,3 +50,4 @@ class handler(BaseHTTPRequestHandler):
 
 with HTTPServer(('', 8000), handler) as server:
 	server.serve_forever()
+	
