@@ -16,6 +16,12 @@ Once you are in the webpage folder, start your php server:
 $ php -S localhost:8080
 ```
 
+You should now be able to open your web browser and type into the URL field (i.e. the address bar):
+
+```
+127.0.0.1:8080
+```
+
 ## Node Server
 If you do not have PHP installed, and you do not want to install it, you can instead install a Node server to run your webpage
 
@@ -23,7 +29,7 @@ If you do not have PHP installed, and you do not want to install it, you can ins
 $ brew install node
 ```
 
-Once node has been installed, you can open your Terminal and go into the `webpage` folder:
+Once `node` has been installed, open your Terminal and go into the `webpage` folder and start serving this webpage to your browser:
 
 ```
 $ http-server
