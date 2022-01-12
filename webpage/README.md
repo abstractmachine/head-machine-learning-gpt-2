@@ -3,40 +3,28 @@
 ## What is this?
 This is a demo of a webpage that communicates with the GPT-2 [server.py](../server/server.py).
 
-## Setup Python
-You will need Python installed on your machine. We have tested this server with Python 3.9.x.
-
-### pyenv
-On a Mac, you can use [brew](https://brew.sh) to install Python. It is recommended on macOS to install `pyenv` first, which will allow you to have several versions of Python for whatever project and version needs it.
-
-To install `pyenv`, go into your `Terminal` and type:
+## PHP server
+Many macOS machines have a server already built-in. To run this server open your Terminal and go into the `webpage` folder:
 
 ```
-$ brew install pyenv
+$ cd head-machine-learning-gpt-2/webpage
 ```
 
-When `pyenv` has finished installing you can test which verisons of `Python` are installed on your machine.
+Once you are in the webpage folder, start your php server:
 
 ```
-$ pyenv versions
-  system
-  3.10.0
-* 3.9.1 (set by /Users/YourUserName/.pyenv/version)
-```
-### Python
-Once you can installed `pyenv` you can easily install whatever version you want.
-
-If you want to see the full list of Python distributions :
-
-```
-$ pyenv install --list
+$ php -S localhost:8080
 ```
 
-
-### Python Libraries
+## Node Server
+If you do not have PHP installed, and you do not want to install it, you can instead install a Node server to run your webpage
 
 ```
-$ python3 -m pip install gpt_2_simple
-$ python3 -m pip install tensorflow
+$ brew install node
 ```
 
+Once node has been installed, you can open your Terminal and go into the `webpage` folder:
+
+```
+$ http-server
+```
