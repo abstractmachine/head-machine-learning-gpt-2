@@ -7,7 +7,7 @@ async function talkToRobot() {
 	// console.log(prompt)
 	
 	// Create WebSocket connection with: 10.42.0.1:8000
-	const request = await fetch("http://localhost/ask;'" + prompt + "'", {
+	const request = await fetch("http://10.42.0.1:8000/ask;'" + prompt + "'", {
 		method: 'GET'
 	})
 
