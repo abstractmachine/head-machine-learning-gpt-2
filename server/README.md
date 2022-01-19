@@ -33,6 +33,10 @@ If you want to see the full list of Python distributions :
 $ pyenv install --list
 ```
 
+### Install pip (if you don't have pip installed)
+```
+$ sudo apt install pip
+```
 
 ### Python Libraries
 
@@ -69,8 +73,6 @@ sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
   
 wget https://developer.download.nvidia.com/compute/cuda/11.5.1/local_installers/cuda-repo-ubuntu2004-11-5-local_11.5.1-495.29.05-1_amd64.deb
   
-sudo apt-key add /var/cuda-repo-ubuntu2004-11-5-local/7fa2af80.pub
-  
 sudo dpkg -i cuda-repo-ubuntu2004-11-5-local_11.5.1-495.29.05-1_amd64.deb
   
 sudo apt-key add /var/cuda-repo-ubuntu2004-11-5-local/7fa2af80.pub
@@ -94,6 +96,12 @@ https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/libcu
 
 Now install the libray with double clicking on the .deb file.
 
+## you can make this with the command line :  
+```
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/libcudnn8_8.0.5.39-1+cuda11.1_amd64.deb
+  
+sudo dpkg -i libcudnn8_8.0.5.39-1+cuda11.1_amd64.deb
+```
 ### Check if the GPU is available :
 
 If everything worked you need to have 1 (or more :-) ) after the line `Number of GPU`.
