@@ -10,7 +10,7 @@ This document is a tutorial/checklist for installing, training, and using [GPT-2
 We are going to be generating text with a bot. The field of computer science that figures out how to teach computers to interpret and generate text is [Natural Language Processing](https://en.wikipedia.org/). Natural Language Processing dates from the earliest reserach in computer science and many of the earliest theoretical texts from the very beginnings — cf. [Computing Machinery and Intelligence](https://en.wikipedia.org/wiki/Computing_Machinery_and_Intelligence) — are related to teaching computers to understand human languge and use it to communicate with us.
 
 ### Historical Approaches to Text Generation
-Given this long history, there are many different historical methods used to generate text with a computer. An excellent overview of the most important techniques can be helpful when making art and design projects that generate text. Sometimes, for example, a neural network is overkill and a simpler, or more straightforward approach would be more helpful.
+Given this long history, there are many different historical methods used to generate text with a computer. An overview of the most important techniques can be helpful when making art and design projects that generate text. Sometimes, for example, a neural network is overkill and a simpler, or more straightforward approach would be more helpful.
 
 An excellent overview of the history of “generative” artworks and the various techniques used to build them is [Philippe Pasquier](https://philippepasquier.com)’s online course [Generative Art and Computational Creativity](https://www.kadenze.com/programs/generative-art-and-computational-creativity).
 
